@@ -1,6 +1,6 @@
 module.exports = function() {
   plugins.gulp.task("sass", function() {
-    return gulp
+    return plugins.gulp
       .src("src/sass/style.scss")
       .pipe(
         plugins.gp.plumber({

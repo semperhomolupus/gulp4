@@ -1,6 +1,6 @@
 module.exports = function() {
   plugins.gulp.task("js", function() {
-    return gulp
+    return plugins.gulp
       .src("src/js/*.js")
       .pipe(
         plugins.gp.plumber({
