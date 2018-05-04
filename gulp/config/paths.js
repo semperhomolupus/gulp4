@@ -1,7 +1,7 @@
 const source = "src"; // Название папки с исходными файлами
 const build = "build"; // Название папки с готовыми файлами
 
-// Эксплоьтоуем пути для gulpfile.js
+// Экспортируем пути для gulpfile.js
 module.exports = {
   project: build,
   src: {
@@ -19,10 +19,10 @@ module.exports = {
     img: build + "/img"
   },
   watch: {
-    sass: "src/sass/**/*.scss",
-    pug: "src/pug/**/*.pug",
-    js: "src/js/**/*.*",
-    fonts: "src/fonts/**/*.*",
-    img: "src/img/**/*.*"
+    sass: source + "/sass/**/*.scss",
+    pug: source + "/pug/**/*.pug",
+    js: source + "/js/**/*.*",
+    fonts: source + "/fonts/**/*.*",
+    img: source + "/img/**/*.*"
   }
 };
