@@ -15,4 +15,4 @@ plugins.path.tasks.forEach(function(taskPath) {
   require(taskPath)();
 });
 
-plugins.gulp.task("default", plugins.gulp.series("build", "watch", "reload"));
+plugins.gulp.task("default", plugins.gulp.series("build", "server"));
