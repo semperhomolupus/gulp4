@@ -4,6 +4,7 @@ global.plugins = {
   gulp: require("gulp"),
   gp: require("gulp-load-plugins")(), //  Подключаем все плагины, начинающиеся с "gulp-".
   browserSync: require("browser-sync").create(),
+  del: require("del"),
 
   path: {
     tasks: require("./gulp/config/tasks.js")
