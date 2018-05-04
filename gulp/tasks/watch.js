@@ -1,6 +1,9 @@
 module.exports = function() {
-  plugins.gulp.task("watch", function() {
-    plugins.gulp.watch("src/pug/**/*.pug", plugins.gulp.series("pug"));
-    plugins.gulp.watch("src/sass/**/*.scss", plugins.gulp.series("sass"));
+  p.gulp.task("watch", function() {
+    p.gulp.watch(p.paths.watch.pug, p.gulp.series("pug"));
+    p.gulp.watch(p.paths.watch.sass, p.gulp.series("sass"));
+    p.gulp.watch(p.paths.watch.js, p.gulp.series("js"));
+    p.gulp.watch(p.paths.watch.fonts, p.gulp.series("fonts"));
+    p.gulp.watch(p.paths.watch.img, p.gulp.series("img"));
   });
 };

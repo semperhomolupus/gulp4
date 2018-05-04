@@ -1,3 +1,3 @@
 module.exports = function() {
-  plugins.gulp.task("server", plugins.gulp.series("watch", "reload"));
+  p.gulp.task("server", p.gulp.parallel("watch", "reload"));
 };

@@ -1,8 +1,8 @@
 module.exports = function() {
-  plugins.gulp.task("fonts", function() {
-    return plugins.gulp
-      .src("src/fonts/*.{woff,woff2,eot,ttf}")
-      .pipe(plugins.gulp.dest("build/fonts"))
-      .pipe(plugins.browserSync.reload({ stream: true }));
+  p.gulp.task("fonts", function() {
+    return p.gulp
+      .src(p.paths.src.fonts)
+      .pipe(p.gulp.dest(p.paths.build.fonts)) // Просто копируем шрифты
+      .pipe(p.browserSync.reload({ stream: true }));
   });
 };

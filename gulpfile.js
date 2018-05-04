@@ -1,18 +1,18 @@
 "use strict";
 
-global.plugins = {
+// p = plugins, корневой объект нашей сборки для расширения области видимости
+global.p = {
   gulp: require("gulp"),
   gp: require("gulp-load-plugins")(), //  Подключаем все плагины, начинающиеся с "gulp-".
   browserSync: require("browser-sync").create(),
   del: require("del"),
 
-  path: {
-    tasks: require("./gulp/config/tasks.js")
-  }
+  paths: require("./gulp/config/paths.js"),
+  tasks: require("./gulp/config/tasks.js")
 };
 
-plugins.path.tasks.forEach(function(taskPath) {
+p.tasks.forEach(function(taskPath) {
   require(taskPath)();
 });
 
-plugins.gulp.task("default", plugins.gulp.series("build", "server"));
+p.gulp.task("default", p.gulp.series("build", "server"));

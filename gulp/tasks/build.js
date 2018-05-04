@@ -1,6 +1,7 @@
 module.exports = function() {
-  plugins.gulp.task(
+  // Сначала удаляем проект, потом выполняем таски
+  p.gulp.task(
     "build",
-    plugins.gulp.series("delete", "pug", "sass", "js", "img", "fonts")
+    p.gulp.series("delete", "pug", "sass", "js", "img", "fonts")
   );
 };

@@ -1,10 +1,11 @@
 module.exports = function() {
-  plugins.gulp.task("sass", function() {
-    return plugins.gulp
-      .src("src/sass/style.scss")
+  p.gulp.task("sass", function() {
+    return p.gulp
+      .src(p.paths.src.scss)
+      .pipe(p.gp.newer(p.paths.build.styles)) // Проверяем из кеша
       .pipe(
-        plugins.gp.plumber({
-          errorHandler: plugins.gp.notify.onError(function(error) {
+        p.gp.plumber({
+          errorHandler: p.gp.notify.onError(function(error) {
             return {
               title: "SASS - ошибка при сборке .scss",
               message: error.message
@@ -12,17 +13,13 @@ module.exports = function() {
           })
         })
       ) // Предотвращает остановку плагина при возникновении ошибки
-      .pipe(plugins.gp.sourcemaps.init()) // Инициализируем gulp-sourcemaps
-      .pipe(plugins.gp.sass.sync()) // Зачем sync (?)
-      .pipe(
-        plugins.gp.autoprefixer({
-          browsers: ["last 10 versions", "> 1%"]
-        })
-      ) // Автопрефиксер
-      .pipe(plugins.gp.csso()) // Минификация css
-      .pipe(plugins.gp.sourcemaps.write()) // Добавляем sourcemaps в файл .css
-      .pipe(plugins.gp.rename({ suffix: ".min" })) // Переименовываем
-      .pipe(plugins.gulp.dest("build/css"))
-      .pipe(plugins.browserSync.reload({ stream: true }));
+      .pipe(p.gp.sourcemaps.init()) // Инициализируем gulp-sourcemaps
+      .pipe(p.gp.sass.sync()) // Зачем sync (?)
+      .pipe(p.gp.autoprefixer({ browsers: ["last 10 versions", "> 1%"] })) // Автопрефиксер
+      .pipe(p.gp.csso()) // Минификация css
+      .pipe(p.gp.sourcemaps.write()) // Добавляем sourcemaps в файл .css
+      .pipe(p.gp.rename({ suffix: ".min" })) // Переименовываем
+      .pipe(p.gulp.dest(p.paths.build.styles))
+      .pipe(p.browserSync.reload({ stream: true }));
   });
 };

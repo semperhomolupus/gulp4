@@ -1,6 +1,6 @@
 module.exports = function() {
-  plugins.gulp.task("delete", function(callback) {
-    plugins.del.sync("build");
+  p.gulp.task("delete", function(callback) {
+    p.del.sync(p.paths.project); // Удаляем папку с собранным проектом
     callback();
   });
 };

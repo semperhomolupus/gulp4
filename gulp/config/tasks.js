@@ -1,4 +1,5 @@
 module.exports = [
+  // Список наших тасков
   "./gulp/tasks/pug", // Конвертируем PUG
   "./gulp/tasks/sass", // Конвертируем SCSS to CSS + минификация
   "./gulp/tasks/js", // Минификация

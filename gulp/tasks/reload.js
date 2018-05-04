@@ -1,5 +1,5 @@
 module.exports = function() {
-  plugins.gulp.task("reload", function() {
-    plugins.browserSync.init({ server: { baseDir: "./build" } });
+  p.gulp.task("reload", function() {
+    p.browserSync.init({ server: { baseDir: "./" + p.paths.project } });
   });
 };
