@@ -6,6 +6,7 @@ module.exports = [
   "./gulp/tasks/img", // Минификация
   "./gulp/tasks/fonts", // Копируем
   "./gulp/tasks/sprite", // Спрайты из PNG
+  "./gulp/tasks/svg-sprite", // Спрайты из PNG
   "./gulp/tasks/delete", // Удаляем build
   "./gulp/tasks/watch", // Наблюдение за файлами
   "./gulp/tasks/reload", // Перезагрузка browsersync
