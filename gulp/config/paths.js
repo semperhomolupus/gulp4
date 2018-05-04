@@ -9,14 +9,17 @@ module.exports = {
     pug: source + "/pug/pages/*.pug",
     js: source + "/js/*.js",
     fonts: source + "/fonts/*.{woff,woff2,eot,ttf}",
-    img: source + "/img/*.{png,jpg,jpeg,gif}"
+    img: [source + "/img/**/*.{png,jpg,jpeg,gif}", "!src/img/sprite/*.*"],
+    sprite: source + "/img/sprite/*.png"
   },
   build: {
     styles: build + "/css",
     html: build,
     js: build + "/js",
     fonts: build + "/fonts",
-    img: build + "/img"
+    img: build + "/img",
+    spriteIMG: build + "/img/sprite",
+    spriteCSS: source + "/sass/mixins"
   },
   watch: {
     sass: source + "/sass/**/*.scss",

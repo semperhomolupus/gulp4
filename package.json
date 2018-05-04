@@ -22,7 +22,9 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-tinypng-nokey": "^1.1.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.9.0",
+    "merge-stream": "^1.0.1"
   },
   "dependencies": {}
 }

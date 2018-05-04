@@ -1,6 +1,8 @@
-# Gulp + Vue multitool by Egor Dyachenko
+## Gulp + Vue multitool by Egor Dyachenko
 
 Современная сборка на Gulp 4.0
+
+> Для работы сборки у вас должны быть глобально установлены `node.js`, `gulp-cli`.
 
 ### Особенности сборки
 
@@ -8,12 +10,10 @@
 * SASS(SCSS)
 * Минификация изображений
 
-Для работы сборки у вас должны быть глобально установлены node.js, gulp-cli
-
 ### Запуск
 
-* npm i / yarn i
-* gulp
+1.  `npm i` / `yarn i`
+2.  `gulp`
 
 ### Команды
 

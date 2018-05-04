@@ -6,7 +6,8 @@ global.p = {
   gp: require("gulp-load-plugins")(), //  Подключаем все плагины, начинающиеся с "gulp-".
   browserSync: require("browser-sync").create(),
   del: require("del"),
-
+  spritesmith: require("gulp.spritesmith"),
+  merge: require("merge-stream"),
   paths: require("./gulp/config/paths.js"),
   tasks: require("./gulp/config/tasks.js")
 };
