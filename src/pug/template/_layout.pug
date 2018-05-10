@@ -3,13 +3,18 @@ html(lang="en")
 
   block vars
 
-  
-
   include _head
+
+  include ../mixins/_svg-sprite
 
   body
 
+  .wrapper
+    
     block content
 
 
   block scripts
+
+  .svg-sprite(style="display: none")
+    include ../../../build/img/symbol/svg-sprite.svg

@@ -18,7 +18,7 @@ module.exports = {
     js: build + "/js",
     fonts: build + "/fonts",
     img: build + "/img",
-    spriteIMG: build + "/img/sprite",
+    spritePNG: build + "/img/sprite",
     spriteCSS: source + "/sass/mixins"
   },
   watch: {

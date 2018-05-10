@@ -1,0 +1,9 @@
+mixin svg(name, addClasses)
+	- var svgClass = 'svg-sprite-icon svg-sprite-icon--'+name
+	- var classesList = '';
+	if addClasses
+		each addClass in addClasses
+			- classesList = classesList+' '+addClass
+	- svgClass = svgClass+classesList
+	svg(class= svgClass)
+		use(xlink:href="#"+name)
