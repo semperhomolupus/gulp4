@@ -2,7 +2,7 @@ module.exports = function () {
   p.gulp.task("png-sprite", function () {
     // Спрайты из PNG
     var data = p.gulp
-      .src(p.paths.src.sprite)
+      .src(p.paths.src.spritePNG)
       .pipe(p.gp.cache(p.gp.tinypngNokey()))
       .pipe(
         p.spritesmith({

@@ -15,7 +15,7 @@ module.exports = function () {
     }; // Activate CSS output (with default options)
 
     return p.gulp
-      .src("src/img/svg-sprite/*.svg")
+      .src(p.paths.src.spriteSVG)
       .pipe(p.gp.svgmin({
         js2svg: {
           pretty: true
@@ -34,6 +34,6 @@ module.exports = function () {
       }))
       .pipe(p.gp.replace('&gt;', '>'))
       .pipe(p.gp.svgSprite(config))
-      .pipe(p.gulp.dest(p.paths.project + "/img"));
+      .pipe(p.gulp.dest(p.paths.build.spriteSVG));
   });
 };

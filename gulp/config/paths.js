@@ -9,8 +9,10 @@ module.exports = {
     pug: source + "/pug/pages/*.pug",
     js: source + "/js/*.js",
     fonts: source + "/fonts/*.{woff,woff2,eot,ttf}",
-    img: [source + "/img/**/*.{png,jpg,jpeg,gif}", "!src/img/sprite/*.*"],
-    sprite: source + "/img/sprite/*.png"
+    img: [source + "/img/**/*.{png,jpg,jpeg,gif}", "!src/img/png-sprite/*.*", "!src/img/svg-sprite/*.*"],
+    svg: source + "/img/svg/*.svg",
+    spritePNG: source + "/img/png-sprite/*.png",
+    spriteSVG: source + "/img/svg-sprite/*.svg"
   },
   build: {
     styles: build + "/css",
@@ -18,7 +20,9 @@ module.exports = {
     js: build + "/js",
     fonts: build + "/fonts",
     img: build + "/img",
+    svg: build + "/img/svg",
     spritePNG: build + "/img/sprite",
+    spriteSVG: build + "/img",
     spriteCSS: source + "/sass/mixins"
   },
   watch: {
@@ -26,6 +30,9 @@ module.exports = {
     pug: source + "/pug/**/*.pug",
     js: source + "/js/**/*.*",
     fonts: source + "/fonts/**/*.*",
-    img: source + "/img/**/*.*"
+    img: source + "/img/**/*.*",
+    svg: source + "/img/svg/*.svg",
+    spritePNG: source + "/img/png-sprite",
+    spriteSVG: source + "/img/svg-sprite"
   }
 };

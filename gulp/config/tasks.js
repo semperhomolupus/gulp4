@@ -4,6 +4,7 @@ module.exports = [
   "./gulp/tasks/sass", // Конвертируем SCSS to CSS + минификация
   "./gulp/tasks/js", // Минификация
   "./gulp/tasks/img", // Минификация
+  "./gulp/tasks/svg", // Минификация + удаляем лишние атрибуты
   "./gulp/tasks/fonts", // Копируем
   "./gulp/tasks/png-sprite", // Спрайты из PNG
   "./gulp/tasks/svg-sprite", // Спрайты из PNG

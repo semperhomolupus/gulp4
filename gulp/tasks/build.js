@@ -10,6 +10,7 @@ module.exports = function () {
       "sass",
       "js",
       "img",
+      "svg",
       "fonts"
     )
   );
