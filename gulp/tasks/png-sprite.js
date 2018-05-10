@@ -6,7 +6,7 @@ module.exports = function () {
       .pipe(p.gp.cache(p.gp.tinypngNokey()))
       .pipe(
         p.spritesmith({
-          imgName: "sprite.png",
+          imgName: "png-sprite.png",
           cssName: "_png-sprite.scss",
           cssFormat: "scss",
           imgPath: "../img/sprite/png-sprite.png",
