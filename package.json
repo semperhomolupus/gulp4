@@ -10,6 +10,7 @@
     "del": "^3.0.0",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-cache": "^1.0.2",
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
