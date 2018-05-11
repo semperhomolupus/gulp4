@@ -23,7 +23,7 @@ module.exports = {
     svg: build + "/img/svg",
     spritePNG: build + "/img/sprite",
     spriteSVG: build + "/img",
-    spriteCSS: source + "/sass/mixins"
+    spriteCSS: source + "/sass/mixins" // Генерируемый файл с данными для PNG-спрайта
   },
   watch: {
     sass: source + "/sass/**/*.scss",
