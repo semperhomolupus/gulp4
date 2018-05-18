@@ -1,5 +1,7 @@
 ## Gulp + Vue multitool by Egor Dyachenko
 
+[![js-semistandard-style](https://cdn.rawgit.com/flet/semistandard/master/badge.svg)](https://github.com/Flet/semistandard)
+
 Современная сборка на Gulp 4.0
 
 > Для работы сборки у вас должны быть глобально установлены `node.js`, `gulp-cli`.
@@ -8,6 +10,7 @@
 
 * PUG
 * SASS(SCSS)
+* JS (Babel, Eslint, Prettier, uglify)
 * Минификация изображений
 * Спрайты PNG (вставляем миксином SCSS)
 * Спрайты SVG (вставляем миксином PUG)
