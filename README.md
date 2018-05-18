@@ -1,6 +1,6 @@
 ## Gulp + Vue multitool by Egor Dyachenko
 
-[![js-semistandard-style](https://cdn.rawgit.com/flet/semistandard/master/badge.svg)](https://github.com/Flet/semistandard)
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 Современная сборка на Gulp 4.0
 
