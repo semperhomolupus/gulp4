@@ -12,7 +12,7 @@ module.exports = {
     img: [source + "/img/**/*.{png,jpg,jpeg,gif}", "!src/img/png-sprite/*.*", "!src/img/svg-sprite/*.*"],
     svg: source + "/img/svg/*.svg",
     spritePNG: source + "/img/png-sprite/*.png",
-    spriteSVG: source + "/img/svg-sprite/*.svg"
+    spriteSVG: source + "/img/svg-sprite/*.svg",
   },
   build: {
     styles: build + "/css",
@@ -23,7 +23,7 @@ module.exports = {
     svg: build + "/img/svg",
     spritePNG: build + "/img/sprite",
     spriteSVG: build + "/img",
-    spriteCSS: source + "/sass/mixins" // Генерируемый файл с данными для PNG-спрайта
+    spriteCSS: source + "/sass/mixins", // Генерируемый файл с данными для PNG-спрайта
   },
   watch: {
     sass: source + "/sass/**/*.scss",
@@ -33,6 +33,6 @@ module.exports = {
     img: source + "/img/**/*.*",
     svg: source + "/img/svg/*.svg",
     spritePNG: source + "/img/png-sprite",
-    spriteSVG: source + "/img/svg-sprite"
-  }
+    spriteSVG: source + "/img/svg-sprite",
+  },
 };

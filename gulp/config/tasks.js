@@ -12,5 +12,5 @@ module.exports = [
   "./gulp/tasks/watch", // Наблюдение за файлами
   "./gulp/tasks/reload", // Перезагрузка browserSync
   "./gulp/tasks/build", // Удаляем билд и собираем все таски
-  "./gulp/tasks/server" // Таски watch + reload
+  "./gulp/tasks/server", // Таски watch + reload
 ];

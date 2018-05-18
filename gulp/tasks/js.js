@@ -1,5 +1,6 @@
 module.exports = function() {
-  p.gulp.task('js', function() {
+  const p = global.p;
+  p.gulp.task("js", function() {
     return p.gulp
       .src(p.paths.src.js)
       .pipe(p.gp.newer(p.paths.build.js))
@@ -7,7 +8,7 @@ module.exports = function() {
         p.gp.plumber({
           errorHandler: p.gp.notify.onError(function(error) {
             return {
-              title: 'JavaScript - ошибка при сборке .js',
+              title: "JavaScript - ошибка при сборке .js",
               message: error.message,
             };
           }),
@@ -22,15 +23,15 @@ module.exports = function() {
       .pipe(p.gp.eslint.format())
       .pipe(
         p.gp.babel({
-          presets: ['env'],
+          presets: ["env"],
         })
       ) // Babel
-      .pipe(p.gp.concat('app.js')) // Объединяем все JS файлы в один
+      .pipe(p.gp.concat("app.js")) // Объединяем все JS файлы в один
       .pipe(p.gp.uglify()) // Минифицируем наш js файл
       .pipe(p.gp.sourcemaps.write()) // Добавляем sourcemaps в файл .js
       .pipe(
         p.gp.rename({
-          suffix: '.min',
+          suffix: ".min",
         })
       ) // Переименовываем
       .pipe(p.gulp.dest(p.paths.build.js))

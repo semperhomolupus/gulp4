@@ -1,5 +1,6 @@
-module.exports = function () {
-  p.gulp.task("png-sprite", function () {
+module.exports = function() {
+  const p = global.p;
+  p.gulp.task("png-sprite", function() {
     // Спрайты из PNG
     var data = p.gulp
       .src(p.paths.src.spritePNG)
@@ -11,9 +12,9 @@ module.exports = function () {
           cssFormat: "scss",
           imgPath: "../img/sprite/png-sprite.png",
           padding: 20,
-          cssVarMap: function (sprite) {
-            sprite.name = "sprite-" + sprite.name; //им файла + конструкция 'sprite-' в начале имени
-          }
+          cssVarMap: function(sprite) {
+            sprite.name = "sprite-" + sprite.name; // им файла + конструкция 'sprite-' в начале имени
+          },
         })
       );
 
