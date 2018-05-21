@@ -1,2 +1,9 @@
 @import "../mixins/_png-sprite";
 @import "../mixins/_svg-sprite";
+// normalize-scss
+@import "../../../node_modules/normalize-scss/sass/_normalize";
+@include normalize();
+// Базовые стили
+@import "_variables";
+@import "_global";
+@import "_ui";

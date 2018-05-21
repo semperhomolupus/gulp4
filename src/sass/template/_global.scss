@@ -1,0 +1,105 @@
+// Border-box на html и все остальные элементы наследуют свойство.
+// Позволяет добавить элемент с другим box-sizing.
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: $line-height;
+  font-size: $font-size-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-basic;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+  color: inherit;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+button:focus,
+button:hover,
+button:active {
+  color: inherit;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Custom classes
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* If you will use new plugins with
+standard document block model and
+have a problem with bsizing: border-box
+ - please use this class 
+ in the main block of plugin */
+
+.bz-content-box {
+  box-sizing: content-box;
+}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Egor Dyachenko",
   "main": "gulpfile.js",
-  "repository": "https://github.com/semperhomolupus/gulp4.git",
+  "repository": "https://github.com/semperhomolupus/gulp4you.git",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -45,5 +45,7 @@
     "merge-stream": "^1.0.1",
     "prettier": "^1.12.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
 }
