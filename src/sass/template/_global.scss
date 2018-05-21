@@ -20,6 +20,16 @@ body {
   font-family: $font-basic;
 }
 
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
 a,
 a:focus,
 a:hover,
