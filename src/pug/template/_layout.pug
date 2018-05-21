@@ -5,23 +5,23 @@ html(lang="en")
 
   include _head
 
-  include ../mixins/_svg-sprite
-
   body
 
-  .wrapper
+    .wrapper
 
-    header.header
+      header.header
+      
+      div.content
+
+        block content
+
+      footer.footer
+
+    block scripts
+
+    // SVG-sprite
+    include ../mixins/_svg-sprite
     
-    div.content
-
-      block content
-
-    footer.footer
-
-  block scripts
-
-  // SVG-sprite
-  .svg-sprite(style="display: none") 
-    //- ↓↓↓↓↓↓↓ Разкоммитить при подключении svg-спрайита ↓↓↓↓↓↓↓
-    //- include ../../../build/img/symbol/svg-sprite.svg
+    .svg-sprite(style="display: none") 
+      //- ↓↓↓↓↓↓↓ Разкоммитить при подключении svg-спрайита ↓↓↓↓↓↓↓
+      //- include ../../../build/img/symbol/svg-sprite.svg
