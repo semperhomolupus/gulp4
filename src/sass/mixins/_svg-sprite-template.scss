@@ -8,7 +8,7 @@
 }
 
 {{#shapes}}
-.svg-sprite-icon--{{base}} {
+.svg-sprite-{{base}} {
 	font-size:({{height.inner}}/10)*1rem;
 	width:({{width.inner}}/{{height.inner}})*1em;
 }
