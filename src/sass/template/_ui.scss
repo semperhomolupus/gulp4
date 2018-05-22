@@ -16,6 +16,8 @@
   &:active {}
 }
 
+// Стили для чекбоксов и радиокнопок
+// Для работы кладем i после кнопки внутрь label
 input[type="checkbox"] {
   display: none;
 }
@@ -24,16 +26,9 @@ input[type="checkbox"]+i {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  &::before {
-    content: "";
-    display: block;
-    width: 21px;
-    height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $color1;
-  }
+  width: 21px;
+  height: 20px;
+  background-color: $color1;
 }
 
 input[type="checkbox"]:checked+i::after {
@@ -57,17 +52,10 @@ input[type="radio"]+i {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  &::before {
-    content: "";
-    display: block;
-    width: 21px;
-    height: 21px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $white;
-    border-radius: 50%;
-  }
+  width: 21px;
+  height: 21px;
+  background-color: $white;
+  border-radius: 50%;
 }
 
 input[type="radio"]:checked+i::after {
