@@ -3,7 +3,81 @@
 // 
 // Пример
 .button {
+  outline: none;
   &:hover {}
   &:focus {}
   &:active {}
+}
+
+.input {
+  outline: none;
+  &:hover {}
+  &:focus {}
+  &:active {}
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]+i {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color1;
+  }
+}
+
+input[type="checkbox"]:checked+i::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 6px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-left: 2px solid $white;
+  border-bottom: 2px solid $white;
+  transform: rotate(-45deg);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]+i {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    border-radius: 50%;
+  }
+}
+
+input[type="radio"]:checked+i::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: $color1;
+  border-radius: 50%;
 }

@@ -3,6 +3,8 @@
 // normalize-scss
 @import "../../../node_modules/normalize-scss/sass/_normalize";
 @include normalize();
+// Шрифты
+@import "_fonts";
 // Базовые стили
 @import "_variables";
 @import "_global";
