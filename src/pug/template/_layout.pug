@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
 
   block vars
 
@@ -17,11 +17,4 @@ html(lang="en")
 
       footer.footer
 
-    block scripts
-
-    // SVG-sprite
-    include ../mixins/_svg-sprite
-    
-    .svg-sprite(style="display: none") 
-      //- ↓↓↓↓↓↓↓ Разкоммитить при подключении svg-спрайита ↓↓↓↓↓↓↓
-      //- include ../../../build/img/symbol/svg-sprite.svg
+    include _end
