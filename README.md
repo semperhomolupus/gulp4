@@ -37,8 +37,16 @@
 
 #### JavaScript
 
-В таске `js` используются `babel` и `eslint` с настройками semistandard. Для автоматического форматирования при сохранении используется `prettier`. 
-Протестировано в VS Code.
+В таске `js` используются `babel` и `eslint` с настройками semistandard. Для автоматического форматирования при сохранении используется `prettier` (одноименный плагин для VS Code можно отключить). 
+
+Для того, чтобы в VS Code при сохранении файла происходило автоматическое исправление в соответствии с настройками `eslint` и `prettier`, в параметрах необходимо отключить автоформатирование для javascripe и добавить форматирование eslint, для этого можно использовать следующие параметры:
+
+    "editor.formatOnSave": true, 
+    "[javascript]": { 
+    "editor.formatOnSave": false, 
+    }, 
+    "eslint.autoFixOnSave": true, 
+    "eslint.alwaysShowStatus": true
 
 #### PNG-Sprite
 
