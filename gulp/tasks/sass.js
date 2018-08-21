@@ -3,6 +3,7 @@ module.exports = function() {
   p.gulp.task("sass", function() {
     return p.gulp
       .src(p.paths.src.scss)
+      .pipe(p.gp.concat("style.min.css"))
       .pipe(p.gp.newer(p.paths.build.styles)) // Проверяем из кеша
       .pipe(
         p.gp.plumber({
@@ -24,11 +25,6 @@ module.exports = function() {
       ) // Автопрефиксер
       .pipe(p.gp.csso()) // Минификация css
       .pipe(p.gp.sourcemaps.write()) // Добавляем sourcemaps в файл .css
-      .pipe(
-        p.gp.rename({
-          suffix: ".min",
-        })
-      ) // Переименовываем
       .pipe(p.gulp.dest(p.paths.build.styles))
       .pipe(
         p.browserSync.reload({

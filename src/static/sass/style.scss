@@ -1,0 +1,10 @@
+// normalize-scss
+@import "node_modules/normalize-scss/sass/_normalize";
+@include normalize();
+@import "src/static/sass/sprite/_png-sprite";
+@import "src/static/sass/sprite/_svg-sprite";
+// Шрифты
+@import "src/static/sass/basic/_fonts";
+@import "src/static/sass/basic/_variables";
+@import "src/static/sass/basic/_global";
+@import "src/static/sass/basic/_ui";

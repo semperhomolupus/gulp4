@@ -3101,7 +3101,7 @@ gulp-cheerio@^0.6.3:
     plugin-error "^0.1.2"
     through2 "^0.6.3"
 
-gulp-cli@^2.0.0:
+gulp-cli@^2.0.0, gulp-cli@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/gulp-cli/-/gulp-cli-2.0.1.tgz#7847e220cb3662f2be8a6d572bf14e17be5a994b"
   dependencies:

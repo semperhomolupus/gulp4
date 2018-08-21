@@ -7,8 +7,8 @@ module.exports = function() {
           sprite: "svg-sprite.svg",
           render: {
             scss: {
-              dest: "../../../src/sass/mixins/_svg-sprite.scss",
-              template: "src/sass/mixins/_svg-sprite-template.scss",
+              dest: "../../../src/components/svg-sprite/svg-sprite.scss",
+              template: "src/static/sass/sprite/_svg-sprite-template.scss",
             },
           },
         },
