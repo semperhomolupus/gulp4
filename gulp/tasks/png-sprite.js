@@ -1,5 +1,4 @@
 module.exports = function () {
-  const p = global.p;
   p.gulp.task("png-sprite", function () {
     // Спрайты из PNG
     var data = p.gulp

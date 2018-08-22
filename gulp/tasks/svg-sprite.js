@@ -1,5 +1,4 @@
 module.exports = function() {
-  const p = global.p;
   p.gulp.task("svg-sprite", function() {
     const config = {
       mode: {

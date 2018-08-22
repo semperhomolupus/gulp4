@@ -1,5 +1,4 @@
 module.exports = function () {
-  const p = global.p;
   p.gulp.task("img", function () {
     return p.gulp
       .src(p.paths.src.img)

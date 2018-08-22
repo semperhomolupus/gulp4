@@ -1,5 +1,4 @@
 module.exports = function () {
-  var p = global.p;
   p.gulp.task("watch", function () {
     p.gulp.watch(p.paths.watch.pug, p.gulp.series("pug"));
     p.gulp.watch(p.paths.watch.sass, p.gulp.series("sass"));

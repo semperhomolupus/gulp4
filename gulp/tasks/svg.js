@@ -1,5 +1,4 @@
 module.exports = function() {
-  const p = global.p;
   p.gulp.task("svg", function() {
     return p.gulp
       .src(p.paths.src.svg)

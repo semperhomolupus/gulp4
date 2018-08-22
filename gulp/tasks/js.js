@@ -1,5 +1,4 @@
 module.exports = function () {
-	const p = global.p;
 	p.gulp.task("js", function () {
 		return (
 			p.gulp
