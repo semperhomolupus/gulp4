@@ -46,6 +46,6 @@ module.exports = {
       password: "",
       parallel: 10
     },
-    sitePath: "" // Пример - "/YOURSITE.test.demo.traf.spb.ru/htdocs/""
+    sitePath: "" // Пример - "/YOURSITE.test.demo.traf.spb.ru/htdocs/"
   }
 };
