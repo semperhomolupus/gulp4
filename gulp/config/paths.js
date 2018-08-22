@@ -35,4 +35,8 @@ module.exports = {
     spritePNG: source + "/static/img/png-sprite",
     spriteSVG: source + "/static/img/svg-sprite",
   },
+  addModule: {
+    template: source + "/components/_template/*.*",
+    result: source + "/components/"
+  }
 };
