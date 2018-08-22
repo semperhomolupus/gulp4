@@ -25,7 +25,7 @@ if (production) {
   p.gulp.task("default", p.gulp.series("build", "server"));
 } else {
   p.gulp.task("default", function (done) {
-    console.log("Введите --dev или --prod")
+    console.log("\n\nВведите 'gulp --dev' или 'gulp --prod'\n\n")
     done()
   });
 }

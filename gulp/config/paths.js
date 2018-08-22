@@ -16,7 +16,7 @@ module.exports = {
   },
   build: {
     styles: build + "/css",
-    html: build,
+    html: build + "/tpl",
     js: build + "/js",
     fonts: build + "/fonts",
     img: build + "/img",

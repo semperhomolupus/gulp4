@@ -15,9 +15,11 @@ module.exports = function () {
         })
       ) // Предотвращает остановку плагина при возникновении ошибки
       .pipe(
+        develop ?
         p.gp.pug({
           pretty: true,
-        })
+        }) :
+        p.gp.pug()
       ) // Конвертируем
       .pipe(p.gulp.dest(p.paths.build.html)) // Копируем
       .pipe(
