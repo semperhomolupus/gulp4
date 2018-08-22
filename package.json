@@ -44,7 +44,8 @@
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.9.0",
     "merge-stream": "^1.0.1",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
     "gulp-cli": "^2.0.1",

@@ -38,5 +38,14 @@ module.exports = {
   addModule: {
     template: source + "/components/_template/*.*",
     result: source + "/components/"
+  },
+  FTP: {
+    params: {
+      host: "",
+      user: "",
+      password: "",
+      parallel: 10
+    },
+    sitePath: "" // Пример - "/YOURSITE.test.demo.traf.spb.ru/htdocs/""
   }
 };

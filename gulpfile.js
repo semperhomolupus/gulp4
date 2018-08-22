@@ -8,6 +8,7 @@ global.p = {
   del: require("del"),
   spritesmith: require("gulp.spritesmith"),
   merge: require("merge-stream"),
+  ftp: require("vinyl-ftp"),
   paths: require("./gulp/config/paths.js"),
   tasks: require("./gulp/config/tasks.js"),
 };
