@@ -27,14 +27,16 @@ module.exports = function () {
 					presets: ["env"],
 				})
 			) // Babel
-			.pipe(p.gp.concat("app.js")) // Объединяем все JS файлы в один
+			.pipe(p.gp.concat("app.min.js")) // Объединяем все JS файлы в один
 			.pipe(develop ? p.gp.util.noop() : p.gp.uglify()) // Минифицируем наш js файл
 			.pipe(develop ? p.gp.sourcemaps.write() : p.gp.util.noop()) // Добавляем sourcemaps в файл .js
-			.pipe(
-				p.gp.rename({
-					suffix: ".min",
-				})
-			) // Переименовываем
+			.pipe(p.gulp.dest(p.paths.build.js))
+			.pipe(p.webpack({
+				mode: 'production',
+				output: {
+					filename: 'app.min.js',
+				},
+			}))
 			.pipe(p.gulp.dest(p.paths.build.js))
 			.pipe(
 				p.browserSync.reload({

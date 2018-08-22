@@ -9,6 +9,7 @@ global.p = {
   spritesmith: require("gulp.spritesmith"),
   merge: require("merge-stream"),
   ftp: require("vinyl-ftp"),
+  webpack: require('webpack-stream'),
   paths: require("./gulp/config/paths.js"),
   tasks: require("./gulp/config/tasks.js"),
 };
