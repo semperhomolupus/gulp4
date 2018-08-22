@@ -1,4 +1,4 @@
-## Gulp + Vue multitool by Egor Dyachenko
+## Gulp multitool by Egor Dyachenko
 
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
@@ -12,11 +12,13 @@
 
 * PUG
 * SASS(SCSS)
-* JS (Babel, Eslint, Prettier, uglify)
+* JS (Babel, Webpack, uglify)
 * Минификация изображений
 * Спрайты PNG (вставляем миксином SCSS)
 * Спрайты SVG (вставляем миксином PUG)
 * Обработка SVG
+
+В сборке 2 глобальных таска - `gulp --dev` и `gulp --prod`. Главным образом, в первом нет минификации всего и вся и есть sourcemaps.
 
 ### Запуск
 
@@ -37,7 +39,8 @@
 
 #### JavaScript
 
-В таске `js` используются `babel` и `eslint` с настройками semistandard. Для автоматического форматирования при сохранении используется `prettier` (одноименный плагин для VS Code можно отключить). 
+В таске `js` используются `webpack`, `babel` и `eslint` с настройками semistandard.
+<!--  Для автоматического форматирования при сохранении используется `prettier` (одноименный плагин для VS Code можно отключить). 
 
 Для того, чтобы в VS Code при сохранении файла происходило автоматическое исправление в соответствии с настройками `eslint` и `prettier`, в параметрах необходимо отключить автоформатирование для javascript и добавить форматирование eslint, для этого можно использовать следующие параметры:
 
@@ -46,7 +49,7 @@
     "editor.formatOnSave": false, 
     }, 
     "eslint.autoFixOnSave": true, 
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true -->
 
 #### PNG-Sprite
 
@@ -54,14 +57,25 @@
 
 #### SVG-Sprite
 
-Спрайт подключается PUG миксином из файла `_svg-sprite`. И добавляется на страницу в шаблоне `pug/template/_layout.pug`, нужно разкоммитить строчку с подключением.
+Спрайт подключается PUG миксином из копонента `svg-sprite`. И добавляется на страницу в шаблоне `src/pages/template/_layout.pug`, нужно разкоммитить строчку с подключением.
 
 #### SASS (SCSS)
 
-* Пакет `normalize.scss` подключается и вызыватся в `templates/_base.scss`.
-* Переменные находятся в `templates/_variables.scss`, там можно настроить такие вещи, как шрифт, его размер, параметры медиа-запросов и т.д.
-* Глобальные стили (свой `reset.css`) находятся в `templates/_global.scss`, желательно настроить под проект. Там же сразу `прижимается футер`.
-* Стили для конкретного проекта в соответствии с его UI-китом находятся в `templates/_ui.scss`.
+* Пакет `normalize.scss` подключается и вызыватся в `src/static/sass/_base.scss`.
+* Переменные находятся в `src/static/sass/_variables.scss`, там можно настроить такие вещи, как шрифт, его размер, параметры медиа-запросов и т.д.
+* Глобальные стили (свой `reset.css`) находятся в `src/static/sass/_global.scss`, желательно настроить под проект. Там же сразу `прижимается футер`.
+* Стили для конкретного проекта в соответствии с его UI-китом находятся в `src/static/sass/_ui.scss`.
 
+#### FTP
+
+Параметры для FTP прописываются в `paths.js`.
+
+```
+    host: "site.com",
+    user: "admin",
+    password: "123456",
+    sitePath: "/htdocs" 
+```
+После просто вводим в консоль `gulp ftp` и все само заливается на сервер.
 
 Спасибо за ознакомление!
