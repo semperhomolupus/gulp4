@@ -9,13 +9,23 @@ global.p = {
   spritesmith: require("gulp.spritesmith"),
   merge: require("merge-stream"),
   paths: require("./gulp/config/paths.js"),
-  tasks: require("./gulp/config/tasks.js")
+  tasks: require("./gulp/config/tasks.js"),
 };
-
-const p = global.p;
 
 p.tasks.forEach(function (taskPath) {
   require(taskPath)();
 });
 
-p.gulp.task("default", p.gulp.series("build", "server"));
+global.production = p.gp.util.env.prod;
+global.develop = p.gp.util.env.dev;
+
+if (production) {
+  p.gulp.task("default", p.gulp.series("build"));
+} else if (develop) {
+  p.gulp.task("default", p.gulp.series("build", "server"));
+} else {
+  p.gulp.task("default", function (done) {
+    console.log("Введите --dev или --prod")
+    done()
+  });
+}
