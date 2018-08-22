@@ -7,7 +7,7 @@ module.exports = {
   src: {
     scss: [source + "/static/sass/style.scss", source + "/components/**/*.scss"],
     pug: source + "/pages/*.pug",
-    js: source + "/components/**/*.js",
+    js: [source + "/static/js/*.js", source + "/components/**/*.js"],
     fonts: source + "static/fonts/*.{woff,woff2,eot,ttf}",
     img: [source + "static/img/**/*.{png,jpg,jpeg,gif}", source + "/components/**/assets/*.*", "!src/static/img/png-sprite/*.*", "!src/static/img/svg-sprite/*.*"],
     svg: [source + "/components/assets/**/*.svg", source + "static/img/svg/**/*.svg"],
