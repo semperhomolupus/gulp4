@@ -9,12 +9,12 @@ global.p = {
   spritesmith: require("gulp.spritesmith"),
   merge: require("merge-stream"),
   paths: require("./gulp/config/paths.js"),
-  tasks: require("./gulp/config/tasks.js"),
+  tasks: require("./gulp/config/tasks.js")
 };
 
 const p = global.p;
 
-p.tasks.forEach(function(taskPath) {
+p.tasks.forEach(function (taskPath) {
   require(taskPath)();
 });
 

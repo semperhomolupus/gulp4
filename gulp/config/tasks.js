@@ -13,4 +13,7 @@ module.exports = [
   "./gulp/tasks/reload", // Перезагрузка browserSync
   "./gulp/tasks/build", // Удаляем билд и собираем все таски
   "./gulp/tasks/server", // Таски watch + reload
+
+
+  "./gulp/tasks/add-module", // Добавить компонент
 ];
