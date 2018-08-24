@@ -27,13 +27,13 @@ module.exports = {
   },
   watch: {
     sass: [source + "/static/sass/**/*.*", source + "/components/**/*.scss"],
-    pug: [source + "/components/**/*.pug", "/pages/*.pug"],
-    js: source + "/components/**/*.js",
+    pug: [source + "/components/**/*.pug", source + "/pages/**/*.pug"],
+    js: [source + "/static/js/*.js", source + "/components/**/*.js"],
     fonts: source + "/static/fonts/**/*.*",
     img: source + [source + "/components/**/assets/*.*", source + "/static/img/**/*.*"],
     svg: source + [source + "/components/assets/**/*.svg", source + "static/img/svg/**/*.svg"],
-    spritePNG: source + "/static/img/png-sprite",
-    spriteSVG: source + "/static/img/svg-sprite",
+    spritePNG: source + "/static/img/png-sprite/*.*",
+    spriteSVG: source + "/static/img/svg-sprite/*.*",
   },
   addModule: {
     template: source + "/components/_template/*.*",
@@ -47,5 +47,15 @@ module.exports = {
       parallel: 10
     },
     sitePath: "" // Пример - "/YOURSITE.test.demo.traf.spb.ru/htdocs/"
+  },
+  browserSync: {
+    server: {
+      baseDir: "./build/",
+      index: "/tpl/index.html"
+    },
+    tunnel: false,
+    host: 'localhost',
+    port: 9000,
+    logPrefix: "Local server"
   }
 };
