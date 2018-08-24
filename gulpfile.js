@@ -18,8 +18,8 @@ p.tasks.forEach(function (taskPath) {
   require(taskPath)();
 });
 
-global.production = p.gp.util.env.prod;
-global.develop = p.gp.util.env.dev;
+global.production = p.gp.util.env.prod ? true : false;
+global.develop = p.gp.util.env.dev ? true : false;
 
 if (production) {
   p.gulp.task("default", p.gulp.series("build"));
@@ -31,3 +31,17 @@ if (production) {
     done()
   });
 }
+
+// For PhpStorm's lovers 
+
+p.gulp.task("dev", p.gulp.series(function (done) {
+  global.develop = true;
+  global.production = false;
+  done()
+}, "build"));
+
+p.gulp.task("prod", p.gulp.series(function (done) {
+  global.develop = false;
+  global.production = true;
+  done()
+}, "build", "server"));
