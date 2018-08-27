@@ -38,10 +38,10 @@ p.gulp.task("dev", p.gulp.series(function (done) {
   global.develop = true;
   global.production = false;
   done()
-}, "build"));
+}, "build", "server"));
 
 p.gulp.task("prod", p.gulp.series(function (done) {
   global.develop = false;
   global.production = true;
   done()
-}, "build", "server"));
+}, "build"));
