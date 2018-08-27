@@ -5,14 +5,25 @@ const build = "build"; // Название папки с готовыми фай
 module.exports = {
   project: build,
   src: {
-    scss: [source + "/static/sass/style.scss", source + "/components/**/*.scss"],
+    scss: [
+      source + "/static/sass/style.scss",
+      source + "/components/**/*.scss"
+    ],
     pug: source + "/pages/*.pug",
     js: [source + "/static/js/*.js", source + "/components/**/*.js"],
-    fonts: source + "static/fonts/*.{woff,woff2,eot,ttf}",
-    img: [source + "static/img/**/*.{png,jpg,jpeg,gif}", source + "/components/**/assets/*.*", "!src/static/img/png-sprite/*.*", "!src/static/img/svg-sprite/*.*"],
-    svg: [source + "/components/assets/**/*.svg", source + "static/img/svg/**/*.svg"],
-    spritePNG: source + "static/img/png-sprite/*.png",
-    spriteSVG: source + "static/img/svg-sprite/*.svg",
+    fonts: source + "/static/fonts/*.{woff,woff2,eot,ttf}",
+    img: [
+      source + "/static/img/**/*.{png,jpg,jpeg,gif}",
+      source + "/components/**/assets/*.*",
+      "!src/static/img/png-sprite/*.*",
+      "!src/static/img/svg-sprite/*.*"
+    ],
+    svg: [
+      source + "/components/assets/**/*.svg",
+      source + "/static/img/svg/**/*.svg"
+    ],
+    spritePNG: source + "/static/img/png-sprite/*.png",
+    spriteSVG: source + "/static/img/svg-sprite/*.svg"
   },
   build: {
     styles: build + "/css",
@@ -23,7 +34,7 @@ module.exports = {
     svg: build + "/img/svg",
     spritePNG: build + "/img/sprite",
     spriteSVG: build + "/img",
-    spriteCSS: source + "/components/svg-sprite", // Генерируемый файл с данными для PNG-спрайта
+    spriteCSS: source + "/components/svg-sprite" // Генерируемый файл с данными для PNG-спрайта
   },
   watch: {
     sass: [source + "/static/sass/**/*.*", source + "/components/**/*.scss"],
@@ -31,9 +42,12 @@ module.exports = {
     js: [source + "/static/js/*.js", source + "/components/**/*.js"],
     fonts: source + "/static/fonts/**/*.*",
     img: [source + "/components/**/assets/*.*", source + "/static/img/**/*.*"],
-    svg: [source + "/components/assets/**/*.svg", source + "static/img/svg/**/*.svg"],
+    svg: [
+      source + "/components/assets/**/*.svg",
+      source + "static/img/svg/**/*.svg"
+    ],
     spritePNG: source + "/static/img/png-sprite/*.*",
-    spriteSVG: source + "/static/img/svg-sprite/*.*",
+    spriteSVG: source + "/static/img/svg-sprite/*.*"
   },
   addModule: {
     template: source + "/components/_template/*.*",
@@ -54,7 +68,7 @@ module.exports = {
       index: "/tpl/index.html"
     },
     tunnel: false,
-    host: 'localhost',
+    host: "localhost",
     port: 9000,
     logPrefix: "Local server"
   }
