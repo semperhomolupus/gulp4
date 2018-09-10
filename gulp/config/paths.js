@@ -65,7 +65,7 @@ module.exports = {
   browserSync: {
     server: {
       baseDir: "./build/",
-      index: "/tpl/index.html"
+      directory: true,
     },
     tunnel: false,
     host: "localhost",
