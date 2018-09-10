@@ -2,8 +2,7 @@ module.exports = function () {
   p.gulp.task("sass", function () {
     return p.gulp
       .src(p.paths.src.scss)
-      .pipe(p.gp.concat("style.min.css"))
-      .pipe(p.gp.newer(p.paths.build.styles)) // Проверяем из кеша
+      .pipe(p.gp.concat("style.min.css")) // Проверяем из кеша
       .pipe(
         p.gp.plumber({
           errorHandler: p.gp.notify.onError(function (error) {
