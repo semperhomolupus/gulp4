@@ -44,7 +44,7 @@ module.exports = {
     img: [source + "/components/**/assets/*.*", source + "/static/img/**/*.*"],
     svg: [
       source + "/components/assets/**/*.svg",
-      source + "static/img/svg/**/*.svg"
+      source + "/static/img/svg/**/*.svg"
     ],
     spritePNG: source + "/static/img/png-sprite/*.*",
     spriteSVG: source + "/static/img/svg-sprite/*.*"
@@ -65,7 +65,7 @@ module.exports = {
   browserSync: {
     server: {
       baseDir: "./build/",
-      directory: true,
+      directory: true
     },
     tunnel: false,
     host: "localhost",
