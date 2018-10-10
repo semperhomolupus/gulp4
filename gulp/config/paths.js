@@ -34,7 +34,7 @@ module.exports = {
     svg: build + "/img/svg",
     spritePNG: build + "/img/sprite",
     spriteSVG: build + "/img",
-    spriteCSS: source + "/components/svg-sprite" // Генерируемый файл с данными для PNG-спрайта
+    spriteCSS: source + "/static/sass/sprite" // Генерируемый файл с данными для PNG-спрайта
   },
   watch: {
     sass: [source + "/static/sass/**/*.*", source + "/components/**/*.scss"],
