@@ -32,7 +32,7 @@ module.exports = function () {
 			.pipe(develop ? p.gp.sourcemaps.write() : p.gp.util.noop()) // Добавляем sourcemaps в файл .js
 			.pipe(p.gulp.dest(p.paths.build.js))
 			.pipe(p.webpack({
-				mode: 'production',
+				mode: 'development',
 				output: {
 					filename: 'app.min.js',
 				},
