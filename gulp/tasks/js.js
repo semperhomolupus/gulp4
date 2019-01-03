@@ -1,5 +1,10 @@
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const TerserPlugin = require('terser-webpack-plugin');
+
 module.exports = function () {
 	p.gulp.task("js", function () {
+		const webpackMode = develop ? 'development' : 'production';
 		return (
 			p.gulp
 			.src(p.paths.src.js)
@@ -14,32 +19,49 @@ module.exports = function () {
 					}),
 				})
 			) // Предотвращает остановку плагина при возникновении ошибки
-			.pipe(develop ? p.gp.sourcemaps.init() : p.gp.util.noop()) // Инициализируем gulp-sourcemaps
-			// .pipe(
-			// 	p.gp.eslint({
-			// 		fix: true,
-			// 	})
-			// )
-			// .pipe(p.gp.eslint.format())
-			.pipe(develop ?
-				p.gp.util.noop() :
-				p.gp.babel({
-					presets: ["env"],
-				})
-			) // Babel
-			.pipe(p.gp.concat("app.min.js")) // Объединяем все JS файлы в один
-			.pipe(develop ? p.gp.util.noop() : p.gp.uglify()) // Минифицируем наш js файл
-			.pipe(develop ? p.gp.sourcemaps.write() : p.gp.util.noop()) // Добавляем sourcemaps в файл .js
-			.pipe(p.gulp.dest(p.paths.build.js))
-			.pipe(p.webpack({
-				mode: 'development',
+			.pipe(webpackStream({
+				mode: webpackMode,
 				output: {
-					filename: 'app.min.js',
+				  filename: 'app.min.js',
 				},
-			}))
+				node: {
+					fs: 'empty'
+				  },
+				module: {
+				  rules: [
+					{
+					  test: /\.(js)$/,
+					  exclude: /(node_modules)/,
+					  loader: 'babel-loader',
+					  query: {
+						presets: ['env']
+					  }
+					}
+				  ]
+				},
+				plugins: [
+					new webpack.ProvidePlugin({
+						$: 'jquery',
+						jQuery: 'jquery'
+						})
+				],
+				externals: {
+					$: 'jquery',
+					jQuery: 'jquery'
+				},
+				optimization: {
+					minimizer: [
+					  new TerserPlugin({
+						sourceMap: true,
+					
+					  }),
+					],
+				  },
+			  }))
 			.pipe(p.gulp.dest(p.paths.build.js))
 			.pipe(
 				p.browserSync.reload({
+					compress: true,
 					stream: true,
 				})
 			)

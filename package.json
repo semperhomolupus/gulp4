@@ -6,7 +6,9 @@
   "repository": "https://github.com/semperhomolupus/gulp4you.git",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.3",
     "del": "^3.0.0",
@@ -46,8 +48,10 @@
     "gulp.spritesmith": "^6.9.0",
     "merge-stream": "^1.0.1",
     "prettier": "^1.12.1",
+    "terser-webpack-plugin": "^1.2.1",
     "vinyl-ftp": "^0.6.1",
-    "webpack-stream": "^5.1.1"
+    "webpack": "^4.28.3",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
     "jquery": "^3.3.1",

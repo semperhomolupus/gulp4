@@ -1,0 +1,22 @@
+mixin Button(data)
+	- let type = data.type !== undefined ? data.type : "button";
+	- let href = data.href !== undefined ? data.href : false;
+	- let id = data.id !== undefined ? data.id : false;
+	- let classList = data.classList !== undefined ? data.classList : "button blue";
+	- let target = data.target !== undefined ? data.target : false;
+
+	if data.href
+		a(
+			href=href
+			class=classList
+			id=id
+			target=target
+		) !{data.text}
+
+	else
+		button(
+			type=type
+			class=classList
+			id=id
+		) !{data.text}
+

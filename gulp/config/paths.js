@@ -10,7 +10,7 @@ module.exports = {
       source + "/components/**/*.scss"
     ],
     pug: source + "/pages/*.pug",
-    js: [source + "/static/js/*.js", source + "/components/**/*.js"],
+    js: [source + "/static/js/index.js"],
     fonts: source + "/static/fonts/*.{woff,woff2,eot,ttf}",
     img: [
       source + "/static/img/**/*.{png,jpg,jpeg,gif}",

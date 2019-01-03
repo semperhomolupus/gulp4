@@ -1,2 +1,5 @@
-import jQuery from "jquery";
-window.$ = window.jQuery = jQuery;
+import $ from "jquery";
+
+// import Component from '../../components/Component/Component';
+
+// Component()
