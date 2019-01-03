@@ -6,6 +6,7 @@ module.exports = [
   "./gulp/tasks/img", // Минификация картинок
   "./gulp/tasks/svg", // Минификация SVG
   "./gulp/tasks/fonts", // Копируем шрифты
+  "./gulp/tasks/assets", // Копируем папку
   "./gulp/tasks/png-sprite", // Спрайты из PNG
   "./gulp/tasks/svg-sprite", // Спрайты из SVG
   "./gulp/tasks/delete", // Удаляем build
@@ -13,7 +14,6 @@ module.exports = [
   "./gulp/tasks/reload", // Перезагрузка browserSync
   "./gulp/tasks/build", // Удаляем билд и собираем все таски
   "./gulp/tasks/server", // Таски watch + reload
-
 
   "./gulp/tasks/add-module", // Добавить компонент
   "./gulp/tasks/ftp", // FTP

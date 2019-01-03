@@ -9,6 +9,7 @@ module.exports = {
       source + "/static/sass/style.scss",
       source + "/components/**/*.scss"
     ],
+    assets: source + "/assets/**/*.*",
     pug: source + "/pages/*.pug",
     js: [source + "/static/js/index.js"],
     fonts: source + "/static/fonts/*.{woff,woff2,eot,ttf}",
@@ -28,6 +29,7 @@ module.exports = {
   build: {
     styles: build + "/css",
     html: build + "/tpl",
+    assets: build + "/assets",
     js: build + "/js",
     fonts: build + "/fonts",
     img: build + "/img",
