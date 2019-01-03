@@ -39,7 +39,7 @@ module.exports = {
     spriteCSS: source + "/static/sass/sprite" // Генерируемый файл с данными для PNG-спрайта
   },
   watch: {
-    sass: [source + "/static/sass/**/*.*", source + "/components/**/*.scss"],
+    sass: [source + "/static/sass/**/*.scss", source + "/components/**/*.scss"],
     pug: [source + "/components/**/*.pug", source + "/pages/**/*.pug"],
     js: [source + "/static/js/*.js", source + "/components/**/*.js"],
     fonts: source + "/static/fonts/**/*.*",
