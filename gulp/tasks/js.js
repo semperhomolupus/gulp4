@@ -22,42 +22,42 @@ module.exports = function () {
 			.pipe(webpackStream({
 				mode: webpackMode,
 				output: {
-				  filename: 'app.min.js',
+					filename: 'app.min.js',
 				},
 				node: {
 					fs: 'empty'
-				  },
+				},
 				module: {
-				  rules: [
-					{
-					  test: /\.(js)$/,
-					  exclude: /(node_modules)/,
-					  loader: 'babel-loader',
-					  query: {
-						presets: ['env']
-					  }
-					}
-				  ]
+					rules: [{
+						test: /\.(js)$/,
+						exclude: /(node_modules)/,
+						loader: 'babel-loader',
+						query: {
+							presets: ['env']
+						}
+					}]
 				},
 				plugins: [
 					new webpack.ProvidePlugin({
 						$: 'jquery',
-						jQuery: 'jquery'
-						})
+						jQuery: 'jquery',
+						"window.jQuery": "jquery"
+					})
 				],
 				externals: {
 					$: 'jquery',
-					jQuery: 'jquery'
+					jQuery: 'jquery',
+					"window.jQuery": "jquery"
 				},
 				optimization: {
 					minimizer: [
-					  new TerserPlugin({
-						sourceMap: true,
-					
-					  }),
+						new TerserPlugin({
+							sourceMap: true,
+
+						}),
 					],
-				  },
-			  }))
+				},
+			}))
 			.pipe(p.gulp.dest(p.paths.build.js))
 			.pipe(
 				p.browserSync.reload({
