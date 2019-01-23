@@ -39,7 +39,11 @@ module.exports = {
     spriteCSS: source + "/static/sass/sprite" // Генерируемый файл с данными для PNG-спрайта
   },
   watch: {
-    sass: [source + "/static/sass/**/*.scss", source + "/components/**/*.scss"],
+    sass: [
+      source + "/static/sass/**/*.scss",
+      source + "/static/sass/basic/*.scss",
+      source + "/components/**/*.scss"
+    ],
     pug: [source + "/components/**/*.pug", source + "/pages/**/*.pug"],
     js: [source + "/static/js/*.js", source + "/components/**/*.js"],
     fonts: source + "/static/fonts/**/*.*",
@@ -66,7 +70,7 @@ module.exports = {
   },
   browserSync: {
     server: {
-      baseDir: "./build/",
+      baseDir: "./" + build,
       directory: true
     },
     tunnel: false,
